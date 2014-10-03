@@ -1,0 +1,104 @@
+{
+    "mapping": {
+        "connections": [
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "-2000.0 2000.0 15.0 500.0", 
+                "expression": "d3=s1*(0.12125)+(257.5)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "-2000.0 2000.0 50.0 12000.0", 
+                "expression": "d2=s1*(2.9875)+(6025)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "300.0 1800.0 1.0 30.0", 
+                "expression": "d4=s0*(0.0193333)+(-4.8)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "300.0 1800.0 -1.0 2.0", 
+                "expression": "d1=s0*(0.002)+(-1.6)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "300.0 1800.0 -1.0 2.0", 
+                "expression": "d0=s0*(0.002)+(-1.6)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "-2000.0 2000.0 -2000.0 2000.0", 
+                "expression": "d5=s2"
+            }
+        ], 
+        "sources": [
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerX", 
+                "id": "s1"
+            }, 
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerY", 
+                "id": "s2"
+            }, 
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerZ", 
+                "id": "s0"
+            }
+        ], 
+        "fileversion": "dot-1", 
+        "destinations": [
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumOnsetCarFreq", 
+                "id": "d3"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumOnsetModFreq", 
+                "id": "d4"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumRate2", 
+                "id": "d1"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumResFreq2", 
+                "id": "d2"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumRate", 
+                "id": "d0"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumloopOnsets", 
+                "id": "d5"
+            }
+        ]
+    }
+}

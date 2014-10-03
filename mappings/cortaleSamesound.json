@@ -1,0 +1,83 @@
+{
+    "mapping": {
+        "connections": [
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "-2000.0 2000.0 -2000.0 2000.0", 
+                "expression": "d3=s3"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "300.0 1800.0 0.0 3.0", 
+                "expression": "d0=s0*(0.002)+(-0.6)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "0.0 10.0 0.0 1.0", 
+                "expression": "d2=s2*(0.1)+(-0)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "-2000.0 2000.0 -2000.0 2000.0", 
+                "expression": "d1=s1"
+            }
+        ], 
+        "sources": [
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerYvelAbs", 
+                "id": "s2"
+            }, 
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerX", 
+                "id": "s1"
+            }, 
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerY", 
+                "id": "s3"
+            }, 
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerZ", 
+                "id": "s0"
+            }
+        ], 
+        "fileversion": "dot-1", 
+        "destinations": [
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/crotaleAmp", 
+                "id": "d2"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/crotaleTimbre", 
+                "id": "d0"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/sameSoundCrotale", 
+                "id": "d3"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/boarderSynthTactImp", 
+                "id": "d1"
+            }
+        ]
+    }
+}

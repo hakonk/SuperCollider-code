@@ -1,0 +1,65 @@
+{
+    "mapping": {
+        "connections": [
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "-2000.0 2000.0 50.0 12000.0", 
+                "expression": "d0=s0*(2.9875)+(6025)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "300.0 1800.0 -1.0 2.0", 
+                "expression": "d1=s1*(0.002)+(-1.6)"
+            }, 
+            {
+                "boundMin": "none", 
+                "muted": 0, 
+                "boundMax": "none", 
+                "scaling": "linear", 
+                "range": "-2000.0 2000.0 -2000.0 2000.0", 
+                "expression": "d2=s2"
+            }
+        ], 
+        "sources": [
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerX", 
+                "id": "s0"
+            }, 
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerY", 
+                "id": "s2"
+            }, 
+            {
+                "device": "Vicon.1", 
+                "parameter": "/markerZ", 
+                "id": "s1"
+            }
+        ], 
+        "fileversion": "dot-1", 
+        "destinations": [
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumResFreq", 
+                "id": "d0"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumloopPure", 
+                "id": "d2"
+            }, 
+            {
+                "device": "SuperCollider.1", 
+                "parameter": "/drumRate", 
+                "id": "d1"
+            }
+        ]
+    }
+}
